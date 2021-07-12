@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Formulário</title>
+</head>
+<body>
+    
+    
+    <form method="GET" action="">
+        
+        <!--Descrever no atributo action o endereço para onde o formulário irá enviar as informações-->
+        <fieldset>
+            <legend>Conta:</legend>
+            <div>
+                <label>Email:</label>
+                <input type="email" name="conta_email" required minlength="5" maxlength="256"/>
+                <!--required obriga o preenchimento do campo para envio-->
+                <!--minlenght e maxlenght delimitam qual o mínimo e máximo de caracteres do campo-->
+                <!--Atributo type tbm é validação, pois delimita o que o usuário consegue ou não digitar ao enviar-->
+            </div>
+    
+            <div>   
+                <label>Senha:</label>
+                <input type="password" name="conta_senha"/>
+            </div>    
+    
+        </fieldset> 
+
+        <fieldset>
+            <legend>Dados Pessoais:</legend>
+            <div>   
+                <label>Nome:</label>
+                <input type="text" placeholder="Ex. Bruno" name="dados_pessoais_nome"/>
+            </div>
+            
+            <div>   
+                <label>Telefone:</label>
+                <input type="text" placeholder="Ex. (99)99999-9999" pattern="(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})" name="dados_pessoais_telefone"/>
+                <!--O atributo pattern é usado para validar o formato de numero de telefone, usando Regex (expressões regulares)-->
+            </div>
+
+            <div>   
+                <label>Sexo:</label>
+                <input type="radio" value="Masculino" name="dados_pessoais_sexo"/>
+                <label>Masculino</label>
+                <input type="radio" value="Feminino" name="dados_pessoais_sexo"/>
+                <label>Feminino</label>
+                <input type="radio" value="Não desejo Informar" name="dados_pessoais_sexo" checked/>
+                <label>Não desejo Informar</label>
+                <!--checked serve para validação, para simbolizar que um dos campos deve ser validado-->
+            </div>
+    
+            <div>   
+                <label>Data de Nascimento:</label>
+                <input type="date" name="dados_pessoais_nascimento"/>
+            </div>
+    
+            <div>   
+                <label>Foto de Perfil:</label>
+                <input type="file" accept="image/*" name="dados_pessoais_foto"/>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Endereço:</legend>
+            <div>   
+                <label>Rua:</label>
+                <input type="text" name="endereco_rua">
+            </div>  
+            
+            <div>   
+                <label>Complemento:</label>
+                <input type="text" name="endereco_complemento"/>
+            </div> 
+            
+            <div>   
+                <label>Número:</label>
+                <input type="number" min="1" max="9999" name="endereco_numero"/>
+                <!--min e max são para validação, de número mínimo e número máximo que pode ser digitado-->
+            </div>
+            
+            <div>   
+                <label>Cidade:</label>
+                <input type="text" name="endereco_cidade"/>
+            </div> 
+    
+            <div>   
+                <label>Estado:</label>
+                <select name="endereco_estado">
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="ES">Espírito Santo</option>
+                </select>
+            </div>
+        </fieldset> 
+        
+        <fieldset>
+            <legend>Anúncios:</legend>
+            <div>   
+                <label>Como conheceu Hello Pizza?</label>
+                <textarea name="anuncios_como_conheceu" maxlength="256" placeholder="Explique por gentileza como nos conheceu"></textarea>
+            </div>
+    
+            <div>   
+                <input type="checkbox" name="anuncios_receber_ofertas" checked/>
+                <label>Desejo receber ofertas por e-mail:</label>
+            </div>
+        </fieldset>
+        
+        <input type="submit" value="Enviar">
+        <!--ou "<button type="submit">Enviar</button>-->
+
+            <div>
+                <label>Mora no Brasil?</label>
+                <select name="brasil">
+                    <option value="S">Sim</option>
+                    <option value="N">Não</option>
+                </select>
+            </div>
+
+    </form>
+
+</body>
+</html>
