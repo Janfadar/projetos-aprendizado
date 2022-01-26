@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*
+Estilo para o conteúdo do formulário.
+*/
+
+html,body{
+    height: 100%;
+}
+
+form{
+    width: 96%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+form fieldset{
+    padding: 20px 80px;
+    border: 2px solid #ccc;
+}
+form legend{
+    font-family: "tahoma";
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    
+}
+
+form input[type=text]{
+    font-family: "tahoma";
+    display: inline-block;
+    margin-top: 10px;
+    width: 80%;
+    padding: 5px 13px;
+    border: 2px solid #ccc;
+}
+
+form input[type=text]:focus, form select:focus, form textarea:focus{
+    outline: 0;
+}
+
+form select{
+    font-family: "tahoma";
+    width: calc(80% + 26px);
+    margin-top:30px;
+    padding: 5px 13px;
+    display: inline-block;
+    border: 2px solid #ccc;
+}
+
+form h3{
+   margin-top: 20px; 
+   color: rgb(0, 0, 0)
+}
+
+.radio-input, .checkbox-input{
+    font-family: "tahoma";
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+}
+.radio-input span, .checkbox-input span{
+    margin-left: 13px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+}
+
+form input[type=submit]{
+    font-family: "tahoma";
+    margin-top: 30px;
+    border: 0;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid black;
+    color: black;
+    background-color: rgb(151, 151, 226);
+}
+
+form textarea{
+    font-family: "tahoma";
+    margin-top: 10px;
+    width: 80%;
+    padding: 5px 13px;
+    height: 140px;
+    border: 2px solid #ccc;
+    resize: none;
+
+}
+
